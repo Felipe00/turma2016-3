@@ -36,9 +36,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:hint="Senha"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:background="#FFF"
+            android:padding="5dp" />
 
         <Button
+            android:onClick="fazerLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_vertical_margin"
@@ -49,7 +52,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:gravity="center_horizontal"
-            android:text="Não possui cadastro? Cadastre-se" />
+            android:text="Não possui cadastro? Cadastre-se"
+            android:textColor="#FFF" />
 
     </LinearLayout>
 
