@@ -1,13 +1,20 @@
-package br.com.interaje.turma2016_3;
+package br.com.interaje.turma2016_3.activities;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import java.io.IOException;
+
+import br.com.interaje.turma2016_3.R;
+import br.com.interaje.turma2016_3.utils.MLRoundedImageView;
 
 public class CadastroActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -52,15 +59,16 @@ public class CadastroActivity extends AppCompatActivity implements View.OnClickL
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == 0) {
-            Uri uri = data.getData();
-            imagem.setImageURI(uri);
+        Uri uri = data.getData();
+        Bitmap bitmap = null;
+        try {
+            bitmap =
+                    MediaStore.Images.Media.getBitmap(this.getContentResolver(), uri);
+        } catch (IOException e) {
+            Log.d("TAG", "Erro ao converter em bitmap");
         }
 
-        if (requestCode == 1) {
-            Uri uri = data.getData();
-            imagem.setImageURI(uri);
-        }
+        imagem.setImageBitmap(MLRoundedImageView.getCroppedBitmap(bitmap, 200));
 
     }
 }
