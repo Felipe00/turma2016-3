@@ -4,19 +4,29 @@
     android:id="@+id/activity_cadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#CCCCCC"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="br.com.interaje.turma2016_3.activities.CadastroActivity">
 
+    <ImageView
+        android:src="@mipmap/minion"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cadastro_imagem"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp" />
+
     <Button
         android:id="@+id/cadastro_camera"
+        android:layout_below="@id/cadastro_imagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Camera" />
 
     <Button
+        android:layout_below="@id/cadastro_imagem"
         android:id="@+id/cadastro_galeria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,10 +34,40 @@
         android:layout_alignParentRight="true"
         android:text="Galeria" />
 
-    <ImageView
+    <!-- <ImageView
         android:id="@+id/cadastro_imagem"
         android:layout_centerInParent="true"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content" /> -->
+
+    <EditText
+        android:id="@+id/nome"
+        style="@style/edittext_style"
+        android:layout_below="@id/cadastro_galeria"
+        android:hint="Nome" />
+
+    <EditText
+        android:id="@+id/sobrenome"
+        android:hint="@string/sobrenome"
+        style="@style/edittext_style"
+        android:layout_below="@id/nome" />
+
+    <EditText
+        android:id="@+id/email"
+        android:hint="@string/email"
+        style="@style/edittext_style"
+        android:layout_below="@id/sobrenome" />
+
+    <EditText
+        android:hint="@string/senha"
+        android:id="@+id/senha"
+        style="@style/edittext_style"
+        android:layout_below="@id/email" />
+
+    <TextView
+        android:text="@string/boas_vindas"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>

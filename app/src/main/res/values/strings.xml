@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Turma 2016_3</string>
+    <string name="senha">Senha</string>
+    <string name="email">Email</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="boas_vindas">Bem vindo ao aplicativo legal, divita-se. Vlw flw.</string>
+    <string name="title_activity_aula6_menu">Menu</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

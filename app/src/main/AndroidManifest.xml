@@ -8,11 +8,15 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.ProdutoActivity" />
-        <activity android:name=".activities.CadastroActivity">
+        <activity android:name=".activities.CadastroActivity" />
+
+        <activity
+            android:name=".activities.Aula6MenuActivity"
+            android:label="@string/title_activity_aula6_menu"
+            android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
