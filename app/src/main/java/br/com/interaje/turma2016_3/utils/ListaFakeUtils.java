@@ -20,7 +20,7 @@ public class ListaFakeUtils {
         }
 
         Produto produto = new Produto();
-        produto.setNome("Vassora");
+        produto.setNome("Vassoura");
         produto.setPreco(2.10);
         produto.setQuantidade(5);
 

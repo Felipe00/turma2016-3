@@ -51,8 +51,11 @@ public class ProdutoAdapter extends BaseAdapter {
 
         Produto produto = produtos.get(position);
 
+        Double mPreco = produto.getPreco();
+        String mPrecoConvertido = "R$ " + mPreco;
+
         nomeTextv.setText(produto.getNome());
-        precoTextv.setText(String.valueOf(produto.getPreco()));
+        precoTextv.setText(mPrecoConvertido);
         quantTextv.setText(String.valueOf(produto.getQuantidade()));
 
         return itemView;
