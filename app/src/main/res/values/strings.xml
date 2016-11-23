@@ -10,4 +10,10 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="coletaapp_layout_textview_registre_se">
+            Não possui uma conta?
+    </string>
+    <string name="about_app">Sobre o app</string>
+    <string name="help">Ajuda</string>
+    <string name="title_activity_sliding_example">SlidingExampleActivity</string>
 </resources>
