@@ -23,6 +23,9 @@
             android:name=".activities.SlidingExampleActivity"
             android:label="@string/title_activity_sliding_example"
             android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".activities.Aula14ThreadsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
