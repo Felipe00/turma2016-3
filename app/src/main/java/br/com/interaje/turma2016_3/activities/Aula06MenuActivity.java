@@ -17,7 +17,7 @@ import android.widget.Toast;
 
 import br.com.interaje.turma2016_3.R;
 
-public class Aula6MenuActivity extends AppCompatActivity
+public class Aula06MenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override

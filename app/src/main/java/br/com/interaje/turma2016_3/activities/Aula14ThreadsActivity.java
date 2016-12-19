@@ -2,12 +2,10 @@ package br.com.interaje.turma2016_3.activities;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
@@ -26,7 +24,7 @@ public class Aula14ThreadsActivity extends AppCompatActivity {
 
         // thread de UI
 
-        startActivity(new Intent(this, Aula6MenuActivity.class));
+        startActivity(new Intent(this, Aula06MenuActivity.class));
 
         final Context context = Aula14ThreadsActivity.this;
 

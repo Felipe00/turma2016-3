@@ -4,34 +4,77 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:name=".utils.ApplicationTurma"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+
+        <!-- SUGAR ORM -->
+
+        <meta-data
+            android:name="DATABASE"
+            android:value="turma.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="br.com.interaje.turma2016_3.model" />
+
+        <!-- FIM SUGAR ORM -->
+
         <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.ProdutoActivity"></activity>
+        <activity android:name=".activities.ProdutoActivity" />
         <activity android:name=".activities.CadastroActivity" />
         <activity
-            android:name=".activities.Aula6MenuActivity"
+            android:name=".activities.Aula06MenuActivity"
             android:label="@string/title_activity_aula6_menu"
-            android:theme="@style/AppTheme.NoActionBar">
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activities.CadastroProdutoActivity" />
         <activity
             android:name=".activities.SlidingExampleActivity"
             android:label="@string/title_activity_sliding_example"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.Aula14ThreadsActivity" />
+        <activity android:name=".activities.Aula17RevisaoActivity">
 
         </activity>
-        <activity android:name=".activities.Aula14ThreadsActivity">
+        <activity android:name=".Login" />
+        <activity android:name=".Cadastro" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".activities.Aula18MapsActivity"
+            android:label="@string/title_activity_aula18_maps" />
+        <activity android:name=".activities.Aula18MapboxActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service android:name="com.mapbox.mapboxsdk.telemetry.TelemetryService" />
     </application>
 
 </manifest>

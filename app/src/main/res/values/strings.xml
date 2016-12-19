@@ -16,4 +16,5 @@
     <string name="about_app">Sobre o app</string>
     <string name="help">Ajuda</string>
     <string name="title_activity_sliding_example">SlidingExampleActivity</string>
+    <string name="title_activity_aula18_maps">Map</string>
 </resources>
