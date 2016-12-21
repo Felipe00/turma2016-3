@@ -1,5 +1,6 @@
 package br.com.interaje.turma2016_3.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -13,6 +14,7 @@ import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
 
 import br.com.interaje.turma2016_3.R;
+import br.com.interaje.turma2016_3.gcm.RegistrationIntentService;
 
 public class Aula18MapboxActivity extends AppCompatActivity {
 
@@ -22,6 +24,8 @@ public class Aula18MapboxActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aula18_mapbox);
+
+        startService(new Intent(this, RegistrationIntentService.class));
 
         mapView = (MapView) findViewById(R.id.mapview);
         mapView.onCreate(savedInstanceState);

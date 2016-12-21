@@ -41,4 +41,10 @@ dependencies {
     compile ('com.mapbox.mapboxsdk:mapbox-android-sdk:4.2.0@aar'){
         transitive=true
     }
+
+    // GCM
+    compile "com.google.android.gms:play-services-gcm:10.0.1"
 }
+
+// GCM config
+apply plugin: 'com.google.gms.google-services'
